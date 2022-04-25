@@ -14,6 +14,8 @@
 		BEEB2BDB2816278000C929B6 /* MenuManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEEB2BDA2816278000C929B6 /* MenuManager.swift */; };
 		BEEB2BDE28162EE900C929B6 /* DayView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEEB2BDD28162EE900C929B6 /* DayView.swift */; };
 		BEEB2BE02816590D00C929B6 /* Mood.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEEB2BDF2816590D00C929B6 /* Mood.swift */; };
+		BEEB2BE2281724AD00C929B6 /* DayManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEEB2BE1281724AD00C929B6 /* DayManager.swift */; };
+		BEEB2BE4281724E300C929B6 /* DayDataStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEEB2BE3281724E300C929B6 /* DayDataStore.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -27,6 +29,8 @@
 		BEEB2BDA2816278000C929B6 /* MenuManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuManager.swift; sourceTree = "<group>"; };
 		BEEB2BDD28162EE900C929B6 /* DayView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DayView.swift; sourceTree = "<group>"; };
 		BEEB2BDF2816590D00C929B6 /* Mood.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Mood.swift; sourceTree = "<group>"; };
+		BEEB2BE1281724AD00C929B6 /* DayManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DayManager.swift; sourceTree = "<group>"; };
+		BEEB2BE3281724E300C929B6 /* DayDataStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DayDataStore.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -76,6 +80,7 @@
 			children = (
 				BEEB2BD7281622BD00C929B6 /* Day.swift */,
 				BEEB2BDF2816590D00C929B6 /* Mood.swift */,
+				BEEB2BE3281724E300C929B6 /* DayDataStore.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -84,6 +89,7 @@
 			isa = PBXGroup;
 			children = (
 				BEEB2BDA2816278000C929B6 /* MenuManager.swift */,
+				BEEB2BE1281724AD00C929B6 /* DayManager.swift */,
 			);
 			path = Managers;
 			sourceTree = "<group>";
@@ -166,6 +172,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BEEB2BE4281724E300C929B6 /* DayDataStore.swift in Sources */,
+				BEEB2BE2281724AD00C929B6 /* DayManager.swift in Sources */,
 				BEEB2BE02816590D00C929B6 /* Mood.swift in Sources */,
 				BEEB2BDB2816278000C929B6 /* MenuManager.swift in Sources */,
 				BEEB2BDE28162EE900C929B6 /* DayView.swift in Sources */,

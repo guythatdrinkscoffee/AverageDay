@@ -9,11 +9,11 @@ import Cocoa
 
 class DayView: NSView {
     //MARK: - Properties
-    var day: Day? = Day(id: UUID(), date: Date(), mood: .okay)
+    var day: Day?
     var buttonArr: [NSButton] = []
-    
+    var moodSelectionHandler: ((Mood) -> Void)?
     //MARK: - UI
-
+    
     private lazy var topTextField : NSTextField = {
         let titleLabelFrame = NSRect(x: 10, y: 44, width: 220, height: 16)
         let titleTextField = NSTextField(frame: titleLabelFrame)
@@ -49,14 +49,33 @@ class DayView: NSView {
     
     override func draw(_ dirtyRect: NSRect) {
         super.draw(dirtyRect)
+    
+        if let day = day {
+          
+            let moodButton = buttonArr.first(where: { $0.tag == day.mood.rawValue})
+            
+            if let moodButton = moodButton {
+                moodButton.bezelColor = .systemBlue
+            }
+        }
+
     }
     
+    
+    //MARK: - Selectors
+    @objc
+    private func handleButtonTap(_ sender: NSButton){
+        guard let moodSelected = Mood(rawValue: sender.tag) else { return }
+        
+        moodSelectionHandler?(moodSelected)
+    }
 }
 
 extension DayView {
     private func configureButtonsInStackView(){
         let moods = Mood.allCases
-        for i in 0..<5 {
+        
+        for i in 0..<moods.count-1 {
             let string = moods[i].moodText
             let mutableString = NSMutableAttributedString(string: string)
             mutableString.addAttribute(NSAttributedString.Key.foregroundColor, value: NSColor.gray, range: NSRange(location: 0, length: (string as NSString).length))
@@ -65,12 +84,15 @@ extension DayView {
             let button = NSButton(frame: NSRect(x: .zero, y: .zero, width: 20, height: 10))
             button.attributedTitle = mutableString
             button.bezelStyle = .regularSquare
+            button.state = .off
             button.tag = i
-            
+            button.target = self
+            button.action = #selector(self.handleButtonTap(_:))
             buttonArr.append(button)
             buttonStackView.addArrangedSubview(button)
         }
     }
+    
 }
 
 extension NSView {

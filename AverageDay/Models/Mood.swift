@@ -7,22 +7,24 @@
 
 import Foundation
 
-enum Mood: Int, CaseIterable {
+enum Mood: Int, CaseIterable, Codable {
     case awful = 0
     case bad = 1
     case okay
     case good
-    case great
     case perfect
+    case noEntry
     
     var moodText: String {
         switch self {
         case .awful : return "😡"
         case .bad : return "😣"
-        case .okay : return "😕"
-        case .good : return "🙂"
-        case .great : return "😀"
+        case .okay : return "🙂"
+        case .good : return "😃"
         case .perfect : return "🤩"
+        case .noEntry : return ""
         }
     }
 }
+
+
