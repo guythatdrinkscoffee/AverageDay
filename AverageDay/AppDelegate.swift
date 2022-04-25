@@ -9,12 +9,13 @@ import Cocoa
 
 @main
 class AppDelegate: NSObject, NSApplicationDelegate {
-
+    //MARK: - Properties
+    @IBOutlet weak var statusMenu: NSMenu!
+    var statusItem: NSStatusItem?
     
-
-
     func applicationDidFinishLaunching(_ aNotification: Notification) {
         // Insert code here to initialize your application
+        configureStatusItem()
     }
 
     func applicationWillTerminate(_ aNotification: Notification) {
@@ -25,6 +26,21 @@ class AppDelegate: NSObject, NSApplicationDelegate {
         return true
     }
 
+    
+}
 
+extension AppDelegate {
+    private func configureStatusItem() {
+        //An NSStatusItem is an item that macOS displays in the system menu.
+        //The part of the menu bar to the right of the screen, it holds the
+        //menu ofr the app.
+        statusItem = NSStatusBar.system.statusItem(withLength: NSStatusItem.variableLength)
+        
+        statusItem?.menu = statusMenu
+        statusItem?.button?.title = "Average Day"
+        statusItem?.button?.imagePosition = .imageLeading
+        statusItem?.button?.image = NSImage(systemSymbolName: "sun.and.horizon", accessibilityDescription: "Average Day")
+        statusItem?.button?.font = NSFont.monospacedSystemFont(ofSize: NSFont.systemFontSize, weight: .regular)
+    }
 }
 

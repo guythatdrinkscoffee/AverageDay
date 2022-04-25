@@ -8,18 +8,17 @@
 
 /* Begin PBXBuildFile section */
 		BEEB2BC72816112600C929B6 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEEB2BC62816112600C929B6 /* AppDelegate.swift */; };
-		BEEB2BC92816112600C929B6 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEEB2BC82816112600C929B6 /* ViewController.swift */; };
 		BEEB2BCB2816112700C929B6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BEEB2BCA2816112700C929B6 /* Assets.xcassets */; };
 		BEEB2BCE2816112700C929B6 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BEEB2BCC2816112700C929B6 /* Main.storyboard */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		BEEB2BC32816112600C929B6 /* AverageDay.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AverageDay.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		BEEB2BC32816112600C929B6 /* Average Day.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Average Day.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		BEEB2BC62816112600C929B6 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		BEEB2BC82816112600C929B6 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		BEEB2BCA2816112700C929B6 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		BEEB2BCD2816112700C929B6 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		BEEB2BCF2816112700C929B6 /* AverageDay.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = AverageDay.entitlements; sourceTree = "<group>"; };
+		BEEB2BD5281612DE00C929B6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -44,7 +43,7 @@
 		BEEB2BC42816112600C929B6 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				BEEB2BC32816112600C929B6 /* AverageDay.app */,
+				BEEB2BC32816112600C929B6 /* Average Day.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -52,8 +51,8 @@
 		BEEB2BC52816112600C929B6 /* AverageDay */ = {
 			isa = PBXGroup;
 			children = (
+				BEEB2BD5281612DE00C929B6 /* Info.plist */,
 				BEEB2BC62816112600C929B6 /* AppDelegate.swift */,
-				BEEB2BC82816112600C929B6 /* ViewController.swift */,
 				BEEB2BCA2816112700C929B6 /* Assets.xcassets */,
 				BEEB2BCC2816112700C929B6 /* Main.storyboard */,
 				BEEB2BCF2816112700C929B6 /* AverageDay.entitlements */,
@@ -64,9 +63,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		BEEB2BC22816112600C929B6 /* AverageDay */ = {
+		BEEB2BC22816112600C929B6 /* Average Day */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = BEEB2BD22816112700C929B6 /* Build configuration list for PBXNativeTarget "AverageDay" */;
+			buildConfigurationList = BEEB2BD22816112700C929B6 /* Build configuration list for PBXNativeTarget "Average Day" */;
 			buildPhases = (
 				BEEB2BBF2816112600C929B6 /* Sources */,
 				BEEB2BC02816112600C929B6 /* Frameworks */,
@@ -76,9 +75,9 @@
 			);
 			dependencies = (
 			);
-			name = AverageDay;
+			name = "Average Day";
 			productName = AverageDay;
-			productReference = BEEB2BC32816112600C929B6 /* AverageDay.app */;
+			productReference = BEEB2BC32816112600C929B6 /* Average Day.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -109,7 +108,7 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				BEEB2BC22816112600C929B6 /* AverageDay */,
+				BEEB2BC22816112600C929B6 /* Average Day */,
 			);
 		};
 /* End PBXProject section */
@@ -131,7 +130,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				BEEB2BC92816112600C929B6 /* ViewController.swift in Sources */,
 				BEEB2BC72816112600C929B6 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -275,6 +273,7 @@
 				DEVELOPMENT_TEAM = 7QBR6L4T36;
 				ENABLE_HARDENED_RUNTIME = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = AverageDay/Info.plist;
 				INFOPLIST_KEY_NSHumanReadableCopyright = "";
 				INFOPLIST_KEY_NSMainStoryboardFile = Main;
 				INFOPLIST_KEY_NSPrincipalClass = NSApplication;
@@ -302,6 +301,7 @@
 				DEVELOPMENT_TEAM = 7QBR6L4T36;
 				ENABLE_HARDENED_RUNTIME = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = AverageDay/Info.plist;
 				INFOPLIST_KEY_NSHumanReadableCopyright = "";
 				INFOPLIST_KEY_NSMainStoryboardFile = Main;
 				INFOPLIST_KEY_NSPrincipalClass = NSApplication;
@@ -329,7 +329,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		BEEB2BD22816112700C929B6 /* Build configuration list for PBXNativeTarget "AverageDay" */ = {
+		BEEB2BD22816112700C929B6 /* Build configuration list for PBXNativeTarget "Average Day" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				BEEB2BD32816112700C929B6 /* Debug */,
