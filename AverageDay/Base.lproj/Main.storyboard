@@ -12,7 +12,7 @@
                         <items>
                             <menuItem title="AverageDay" id="1Xt-HY-uBw">
                                 <modifierMask key="keyEquivalentModifierMask"/>
-                                <menu key="submenu" title="AverageDay" systemMenu="apple" id="uQy-DD-JDr">
+                                <menu key="submenu" title="AverageDay" systemMenu="apple" autoenablesItems="NO" id="uQy-DD-JDr">
                                     <items>
                                         <menuItem title="About AverageDay" id="5kV-Vb-QxS">
                                             <modifierMask key="keyEquivalentModifierMask"/>

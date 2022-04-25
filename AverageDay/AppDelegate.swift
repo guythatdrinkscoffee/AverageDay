@@ -12,10 +12,12 @@ class AppDelegate: NSObject, NSApplicationDelegate {
     //MARK: - Properties
     @IBOutlet weak var statusMenu: NSMenu!
     var statusItem: NSStatusItem?
+    var menuManager: MenuManager?
     
     func applicationDidFinishLaunching(_ aNotification: Notification) {
         // Insert code here to initialize your application
         configureStatusItem()
+        configureMenuManager()
     }
 
     func applicationWillTerminate(_ aNotification: Notification) {
@@ -30,6 +32,11 @@ class AppDelegate: NSObject, NSApplicationDelegate {
 }
 
 extension AppDelegate {
+    private func configureMenuManager(){
+        menuManager = MenuManager(statusMenu: statusMenu)
+        statusMenu.delegate = menuManager
+    }
+    
     private func configureStatusItem() {
         //An NSStatusItem is an item that macOS displays in the system menu.
         //The part of the menu bar to the right of the screen, it holds the
