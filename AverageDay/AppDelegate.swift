@@ -7,10 +7,12 @@
 
 import Cocoa
 
+
 @main
 class AppDelegate: NSObject, NSApplicationDelegate {
     //MARK: - Properties
     @IBOutlet weak var statusMenu: NSMenu!
+    @IBOutlet weak var showAllEntries: NSMenuItem!
     var statusItem: NSStatusItem?
     var menuManager: MenuManager?
     
@@ -29,6 +31,9 @@ class AppDelegate: NSObject, NSApplicationDelegate {
     }
 
     
+    @IBAction func showAllEntries(_ sender: Any) {
+
+    }
 }
 
 extension AppDelegate {

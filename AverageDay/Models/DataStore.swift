@@ -7,7 +7,7 @@
 
 import Foundation
 
-struct DayDataStore {
+struct DataStore {
     func getFileURL () -> URL? {
         
         do {
@@ -20,21 +20,21 @@ struct DayDataStore {
         }
     }
     
-    func readDays() -> [Day] {
-        guard let url = getFileURL() else { return []}
+    func readEntries() -> [String: [Day]] {
+        guard let url = getFileURL() else {return [:]}
         
         do {
             let data = try Data(contentsOf: url)
-            let days = try JSONDecoder().decode([Day].self, from: data)
-            return days
+            let entries = try JSONDecoder().decode([String: [Day]].self, from: data)
+            return entries
         } catch {
             print("Failed to read: \(error.localizedDescription)")
-            return []
+            return [:]
         }
     }
     
-    func save(days: [Day]) {
-        guard let url = getFileURL(), let data = try? JSONEncoder().encode(days) else {
+    func save(entries: [String: [Day]]) {
+        guard let url = getFileURL(), let data = try? JSONEncoder().encode(entries) else {
             return
         }
         

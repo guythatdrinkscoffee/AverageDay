@@ -30,7 +30,7 @@ class MenuManager: NSObject, NSMenuDelegate {
     }
     
     private func clearMenu(){
-        let stopIndex = statusMenu.items.count - 2
+        let stopIndex = statusMenu.items.count - 3
         let itemsBefore = 2
         
         for _ in itemsBefore..<stopIndex {
@@ -45,22 +45,13 @@ class MenuManager: NSObject, NSMenuDelegate {
       
         dayItem.title = "How was your day?"
         dayItem.view = dayView
-        
+
         dayView.day = dayManager.currentDay
         
         dayView.moodSelectionHandler = { mood in
             self.dayManager.setMood(mood: mood)
-            self.updateMenuItems()
         }
      
         statusMenu.insertItem(dayItem, at: 2)
-    }
-    
-    private func updateMenuItems(){
-        for item in statusMenu.items {
-            if let view = item.view as? DayView {
-                view.setNeedsDisplay(.infinite)
-            }
-        }
     }
 }
