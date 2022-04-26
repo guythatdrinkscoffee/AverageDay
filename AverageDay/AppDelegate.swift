@@ -6,6 +6,7 @@
 //
 
 import Cocoa
+import SwiftUI
 
 
 @main
@@ -32,7 +33,16 @@ class AppDelegate: NSObject, NSApplicationDelegate {
 
     
     @IBAction func showAllEntries(_ sender: Any) {
-
+        let hostingController = NSHostingController(rootView: EntriesView())
+        
+        let window = NSWindow(contentViewController: hostingController)
+        window.title = "This Month's Entries"
+        
+        let controller = NSWindowController(window: window)
+        
+        NSApp.activate(ignoringOtherApps: true)
+        
+        controller.showWindow(nil)
     }
 }
 

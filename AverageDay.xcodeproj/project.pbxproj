@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		BE0A527D281867DE0066F8B1 /* EntriesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE0A527C281867DE0066F8B1 /* EntriesView.swift */; };
 		BEEB2BC72816112600C929B6 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEEB2BC62816112600C929B6 /* AppDelegate.swift */; };
 		BEEB2BCB2816112700C929B6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BEEB2BCA2816112700C929B6 /* Assets.xcassets */; };
 		BEEB2BCE2816112700C929B6 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BEEB2BCC2816112700C929B6 /* Main.storyboard */; };
@@ -20,6 +21,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		BE0A527C281867DE0066F8B1 /* EntriesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EntriesView.swift; sourceTree = "<group>"; };
 		BEEB2BC32816112600C929B6 /* Average Day.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Average Day.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		BEEB2BC62816112600C929B6 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		BEEB2BCA2816112700C929B6 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -101,6 +103,7 @@
 			isa = PBXGroup;
 			children = (
 				BEEB2BDD28162EE900C929B6 /* DayView.swift */,
+				BE0A527C281867DE0066F8B1 /* EntriesView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -180,6 +183,7 @@
 				BEEB2BE2281724AD00C929B6 /* DayManager.swift in Sources */,
 				BEEB2BE02816590D00C929B6 /* Mood.swift in Sources */,
 				BEEB2BDB2816278000C929B6 /* MenuManager.swift in Sources */,
+				BE0A527D281867DE0066F8B1 /* EntriesView.swift in Sources */,
 				BEEB2BDE28162EE900C929B6 /* DayView.swift in Sources */,
 				BEEB2BD8281622BD00C929B6 /* Day.swift in Sources */,
 				BEEB2BC72816112600C929B6 /* AppDelegate.swift in Sources */,

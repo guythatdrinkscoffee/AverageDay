@@ -22,7 +22,7 @@ enum Mood: Int, CaseIterable, Codable {
         case .okay : return "🙂"
         case .good : return "😃"
         case .perfect : return "🤩"
-        case .noEntry : return ""
+        case .noEntry : return "🤷‍♂️"
         }
     }
 }
