@@ -13,6 +13,7 @@ class DayManager {
     var entries: [String: [Day]] = [:]
     var dataStore = DataStore()
     var currentDay: Day!
+    var currentDaySub: AnyCancellable?
     
     init(){
         //Read the entries from the JSON file
@@ -20,6 +21,15 @@ class DayManager {
         
         configureEntries()
         configureCurrentDay()
+        
+        currentDaySub = NotificationCenter.default
+            .publisher(for: .NSCalendarDayChanged, object: nil)
+            .sink(receiveValue: { _ in
+                if self.entries[.currentMonthString] == nil {
+                    self.configureEntries()
+                }
+                self.configureCurrentDay()
+            })
     }
     
     private func configureEntries(){

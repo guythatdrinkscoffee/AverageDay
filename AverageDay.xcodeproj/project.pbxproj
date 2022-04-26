@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		BE0A527D281867DE0066F8B1 /* EntriesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE0A527C281867DE0066F8B1 /* EntriesView.swift */; };
+		BE0A527F281896CD0066F8B1 /* GridView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE0A527E281896CD0066F8B1 /* GridView.swift */; };
+		BE0A52812818971A0066F8B1 /* CalendarDayView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE0A52802818971A0066F8B1 /* CalendarDayView.swift */; };
 		BEEB2BC72816112600C929B6 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEEB2BC62816112600C929B6 /* AppDelegate.swift */; };
 		BEEB2BCB2816112700C929B6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BEEB2BCA2816112700C929B6 /* Assets.xcassets */; };
 		BEEB2BCE2816112700C929B6 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BEEB2BCC2816112700C929B6 /* Main.storyboard */; };
@@ -22,6 +24,8 @@
 
 /* Begin PBXFileReference section */
 		BE0A527C281867DE0066F8B1 /* EntriesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EntriesView.swift; sourceTree = "<group>"; };
+		BE0A527E281896CD0066F8B1 /* GridView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GridView.swift; sourceTree = "<group>"; };
+		BE0A52802818971A0066F8B1 /* CalendarDayView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarDayView.swift; sourceTree = "<group>"; };
 		BEEB2BC32816112600C929B6 /* Average Day.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Average Day.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		BEEB2BC62816112600C929B6 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		BEEB2BCA2816112700C929B6 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -104,6 +108,8 @@
 			children = (
 				BEEB2BDD28162EE900C929B6 /* DayView.swift */,
 				BE0A527C281867DE0066F8B1 /* EntriesView.swift */,
+				BE0A527E281896CD0066F8B1 /* GridView.swift */,
+				BE0A52802818971A0066F8B1 /* CalendarDayView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -186,7 +192,9 @@
 				BE0A527D281867DE0066F8B1 /* EntriesView.swift in Sources */,
 				BEEB2BDE28162EE900C929B6 /* DayView.swift in Sources */,
 				BEEB2BD8281622BD00C929B6 /* Day.swift in Sources */,
+				BE0A527F281896CD0066F8B1 /* GridView.swift in Sources */,
 				BEEB2BC72816112600C929B6 /* AppDelegate.swift in Sources */,
+				BE0A52812818971A0066F8B1 /* CalendarDayView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
