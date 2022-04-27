@@ -28,7 +28,15 @@
                                                 <action selector="showAllEntries:" target="Voe-Tx-rLC" id="NrD-aT-NdE"/>
                                             </connections>
                                         </menuItem>
-                                        <menuItem title="Quit AverageDay" keyEquivalent="q" id="4sb-4s-VLi">
+                                        <menuItem isSeparatorItem="YES" id="MrD-Dg-Nxr"/>
+                                        <menuItem title="Launch On Login" id="Exf-Nr-aUr">
+                                            <modifierMask key="keyEquivalentModifierMask"/>
+                                            <connections>
+                                                <action selector="toggleLaunchOnLogIn:" target="Voe-Tx-rLC" id="vFk-au-eNP"/>
+                                            </connections>
+                                        </menuItem>
+                                        <menuItem title="Quit AverageDay" id="4sb-4s-VLi">
+                                            <modifierMask key="keyEquivalentModifierMask"/>
                                             <connections>
                                                 <action selector="terminate:" target="Ady-hI-5gd" id="Te7-pn-YzF"/>
                                             </connections>
@@ -44,6 +52,7 @@
                 </application>
                 <customObject id="Voe-Tx-rLC" customClass="AppDelegate" customModule="Average_Day" customModuleProvider="target">
                     <connections>
+                        <outlet property="launchOnLoginMenuItem" destination="Exf-Nr-aUr" id="P1L-pl-876"/>
                         <outlet property="showAllEntries" destination="Onq-LD-sxf" id="Plr-Yb-r5G"/>
                         <outlet property="statusMenu" destination="uQy-DD-JDr" id="DyN-VI-rD7"/>
                     </connections>

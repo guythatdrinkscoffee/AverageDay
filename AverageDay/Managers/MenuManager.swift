@@ -30,7 +30,7 @@ class MenuManager: NSObject, NSMenuDelegate {
     }
     
     private func clearMenu(){
-        let stopIndex = statusMenu.items.count - 3
+        let stopIndex = statusMenu.items.count - 5
         let itemsBefore = 2
         
         for _ in itemsBefore..<stopIndex {

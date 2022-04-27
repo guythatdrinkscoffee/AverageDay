@@ -7,13 +7,14 @@
 
 import Cocoa
 import SwiftUI
-
+import LaunchAtLogin
 
 @main
 class AppDelegate: NSObject, NSApplicationDelegate {
     //MARK: - Properties
     @IBOutlet weak var statusMenu: NSMenu!
     @IBOutlet weak var showAllEntries: NSMenuItem!
+    @IBOutlet weak var launchOnLoginMenuItem: NSMenuItem!
     var statusItem: NSStatusItem?
     var menuManager: MenuManager?
     
@@ -21,6 +22,8 @@ class AppDelegate: NSObject, NSApplicationDelegate {
         // Insert code here to initialize your application
         configureStatusItem()
         configureMenuManager()
+        
+        launchOnLoginMenuItem.state = LaunchAtLogin.isEnabled ? .on : .off
     }
 
     func applicationWillTerminate(_ aNotification: Notification) {
@@ -43,6 +46,12 @@ class AppDelegate: NSObject, NSApplicationDelegate {
         NSApp.activate(ignoringOtherApps: true)
         
         controller.showWindow(nil)
+    }
+    
+    
+    @IBAction func toggleLaunchOnLogIn(_ sender: Any) {
+        LaunchAtLogin.isEnabled.toggle()
+        launchOnLoginMenuItem.state = LaunchAtLogin.isEnabled ? .on : .off
     }
 }
 

@@ -34,7 +34,7 @@ struct CalendarDayView: View {
                 .padding(5)
 
         }
-        .background(isDayToday ? .blue : .clear)
+        .background(isDayToday ? .blue : .white)
         .cornerRadius(10)
         .overlay(
             RoundedRectangle(cornerRadius: 10)
