@@ -15,7 +15,7 @@ class DayView: NSView {
     //MARK: - UI
     
     private lazy var topTextField : NSTextField = {
-        let titleLabelFrame = NSRect(x: 10, y: 44, width: 220, height: 16)
+        let titleLabelFrame = NSRect(x: 20, y: 44, width: 220, height: 16)
         let titleTextField = NSTextField(frame: titleLabelFrame)
         titleTextField.backgroundColor = .clear
         titleTextField.isBezeled = false
